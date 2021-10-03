@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Exemplo04</string>
+    <string name="italico">Italico</string>
+    <string name="negrito">Negrito</string>
+    <string name="maiusculo">Maiusculo</string>
+    <string name="vermelho">Vermelho</string>
+    <string name="Azul">Azul</string>
+    <string name="verde">Verde</string>
+    <string name="texto">Texto</string>
+</resources>

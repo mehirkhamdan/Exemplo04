@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E7ECF2"
+    android:elevation="20dp"
+    android:focusable="auto"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtTexto"
+        android:layout_width="306dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="36dp"
+        android:background="@color/white"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="26dp"
+        android:text="Texto"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTexto"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/edtTexto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:ems="10"
+        app:layout_constraintEnd_toStartOf="@+id/bntInput"
+        app:layout_constraintStart_toEndOf="@+id/TextView"
+        app:layout_constraintTop_toBottomOf="@+id/txtTexto"
+        android:importantForAutofill="no"
+        android:inputType=""
+        tools:ignore="LabelFor" />
+
+    <Button
+        android:id="@+id/bntInput"
+        android:layout_width="59dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="30dp"
+        android:background="#F6F2F2"
+        app:backgroundTint="#E6E6E6"
+        app:icon="@android:drawable/stat_sys_upload"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/edtTexto"
+        app:layout_constraintTop_toBottomOf="@+id/txtTexto" />
+
+    <TextView
+        android:id="@+id/tamanho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:text="Tamanho da letra"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtTexto"
+        tools:ignore="HardcodedText" />
+
+    <SeekBar
+        android:id="@+id/skbLetra"
+        android:layout_width="232dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tamanho" />
+
+    <TextView
+        android:id="@+id/txtValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="56dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/skbLetra"
+        app:layout_constraintTop_toBottomOf="@+id/bntInput" />
+
+    <TextView
+        android:id="@+id/estilo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="38dp"
+        android:text="Estilo"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tamanho"
+        tools:ignore="HardcodedText" />
+
+    <CheckBox
+        android:id="@+id/ckbNegrito"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/negrito"
+        android:onClick="onCheckBoxClicked"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/estilo" />
+
+    <CheckBox
+        android:id="@+id/ckbItalico"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="3dp"
+        android:text="@string/italico"
+        android:onClick="onCheckBoxClicked"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ckbNegrito" />
+
+    <CheckBox
+        android:id="@+id/ckbMaiusculo"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="3dp"
+        android:text="@string/maiusculo"
+        android:onClick="onCheckBoxClicked"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ckbItalico" />
+
+    <TextView
+        android:id="@+id/corletra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="17dp"
+        android:text="Cor da Letra"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ckbMaiusculo"
+        tools:ignore="HardcodedText" />
+
+    <RadioGroup
+        android:id="@+id/rdgColor"
+        android:layout_width="372dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/corletra">
+
+        <RadioButton
+            android:id="@+id/rdbVermelho"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/vermelho"
+            tools:layout_conversion_absoluteHeight="26dp"
+            tools:layout_editor_absoluteY="434dp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_conversion_absoluteWidth="93dp"
+            app:layout_constraintStart_toStartOf="@+id/rdgColor"
+            app:layout_constraintTop_toBottomOf="@+id/corletra"/>
+
+        <RadioButton
+            android:id="@+id/rdbAzul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Azul"
+            tools:layout_conversion_absoluteHeight="26dp"
+            tools:layout_editor_absoluteY="434dp"
+            tools:layout_editor_absoluteX="109dp"
+            tools:layout_conversion_absoluteWidth="59dp"
+            app:layout_constraintStart_toEndOf="@+id/rddVermelho"
+            app:layout_constraintTop_toBottomOf="@+id/skbLetra"/>
+
+        <RadioButton
+            android:id="@+id/rdbVerde"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/verde"
+            tools:layout_conversion_absoluteHeight="26dp"
+            tools:layout_editor_absoluteY="434dp"
+            tools:layout_editor_absoluteX="168dp"
+            tools:layout_conversion_absoluteWidth="69dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/rdbAzul"
+        app:layout_constraintTop_toBottomOf="@+id/txtValue"/>
+
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
